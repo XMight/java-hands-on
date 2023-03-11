@@ -33,4 +33,12 @@ public class Planet {
     public int hashCode() {
         return Objects.hash(id, name);
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

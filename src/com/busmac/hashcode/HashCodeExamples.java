@@ -1,8 +1,6 @@
 package com.busmac.hashcode;
 
 import com.busmac.models.Planet;
-import com.busmac.models.PlanetWithBadHashCode;
-import com.busmac.models.PlanetWithBadHashCodeAndEquals;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,6 +11,13 @@ public class HashCodeExamples implements Runnable {
 
     @Override
     public void run() {
+        byte num1 = 8;
+        byte num2 = -8;
+
+        System.out.println(num1 >>> 1);
+        System.out.println(num2 >>> 1);
+        System.out.println(num2 >> 1);
+
         Planet earth1 = new Planet(EARTH);
         Planet earth2 = new Planet(EARTH);
         PlanetWithBadHashCode earth3 = new PlanetWithBadHashCode(EARTH);
