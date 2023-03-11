@@ -1,10 +1,10 @@
 package com.abusmac;
 
-import com.abusmac.threading.ThreadingExamples;
+import com.abusmac.proxy.ProxyExamples;
 
 public class Main {
     public static void main(String[] args) {
-        ThreadingExamples threadingExamples = new ThreadingExamples();
-        threadingExamples.run();
+        ProxyExamples proxyExamples = new ProxyExamples();
+        proxyExamples.run();
     }
 }
