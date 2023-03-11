@@ -1,6 +1,6 @@
-package com.busmac.models;
+package com.abusmac.models;
 
-import com.busmac.utils.IdGenerator;
+import com.abusmac.utils.IdGenerator;
 
 import java.util.Objects;
 

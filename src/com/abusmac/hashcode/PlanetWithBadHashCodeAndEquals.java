@@ -1,6 +1,6 @@
-package com.busmac.hashcode;
+package com.abusmac.hashcode;
 
-import com.busmac.models.Planet;
+import com.abusmac.models.Planet;
 
 public class PlanetWithBadHashCodeAndEquals extends PlanetWithBadHashCode {
     public PlanetWithBadHashCodeAndEquals(String name) {

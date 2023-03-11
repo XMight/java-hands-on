@@ -1,4 +1,4 @@
-package com.busmac.models;
+package com.abusmac.models;
 
 public record RecordStar() {
 }

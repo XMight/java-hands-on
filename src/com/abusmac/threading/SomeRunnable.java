@@ -1,4 +1,4 @@
-package com.busmac.threading;
+package com.abusmac.threading;
 
 public class SomeRunnable implements Runnable {
     int sleep;

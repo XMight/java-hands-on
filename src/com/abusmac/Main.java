@@ -1,6 +1,6 @@
-package com.busmac;
+package com.abusmac;
 
-import com.busmac.threading.ThreadingExamples;
+import com.abusmac.threading.ThreadingExamples;
 
 public class Main {
     public static void main(String[] args) {

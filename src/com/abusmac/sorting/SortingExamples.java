@@ -1,4 +1,4 @@
-package com.busmac.sorting;
+package com.abusmac.sorting;
 
 import java.util.Arrays;
 

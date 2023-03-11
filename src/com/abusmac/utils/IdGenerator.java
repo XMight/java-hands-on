@@ -1,4 +1,4 @@
-package com.busmac.utils;
+package com.abusmac.utils;
 
 public class IdGenerator {
     private static ThreadLocal<Integer> id = ThreadLocal.withInitial(() -> 0);

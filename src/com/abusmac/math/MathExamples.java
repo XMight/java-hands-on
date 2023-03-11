@@ -1,4 +1,4 @@
-package com.busmac.math;
+package com.abusmac.math;
 
 public class MathExamples implements Runnable {
     @Override

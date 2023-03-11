@@ -1,7 +1,7 @@
-package com.busmac.cloning;
+package com.abusmac.cloning;
 
-import com.busmac.models.Planet;
-import com.busmac.models.SolarSystem;
+import com.abusmac.models.Planet;
+import com.abusmac.models.SolarSystem;
 
 import java.util.HashMap;
 import java.util.Map;
