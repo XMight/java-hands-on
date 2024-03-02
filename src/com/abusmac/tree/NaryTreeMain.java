@@ -2,58 +2,61 @@ package com.abusmac.tree;
 
 import java.util.*;
 
-public class TreeMain {
+public class NaryTreeMain {
     static Queue<Integer> bfsTraversalQueue = new LinkedList<>(Arrays.asList(0, 1, 2, 3, 4, 5, 6));
     static Queue<Integer> dfsTraversalQueue = new LinkedList<>(Arrays.asList(0, 2, 6, 5, 1, 4, 3));
 
     public static void main(String[] args) {
-        Node<Integer> rootNode = getTree();
+        NaryNode<Integer> rootNode = getTree();
 
         bfs(rootNode);
+        System.out.println();
         dfs(rootNode);
     }
 
-    private static void dfs(Node<Integer> tree) {
-        Stack<Node<Integer>> traversalStack = new Stack<>();
+
+
+    private static void dfs(NaryNode<Integer> tree) {
+        Stack<NaryNode<Integer>> traversalStack = new Stack<>();
         traversalStack.push(tree);
 
         while(!traversalStack.empty()) {
-            Node<Integer> node = traversalStack.pop();
+            NaryNode<Integer> node = traversalStack.pop();
 
-            List<Node<Integer>> children = node.getChildren();
+            List<NaryNode<Integer>> children = node.getChildren();
             traversalStack.addAll(children);
 
             printNodeWithCheck(node, dfsTraversalQueue);
         }
     }
 
-    private static void bfs(Node<Integer> treeNode) {
-        Queue<Node<Integer>> traversalQueue = new LinkedList<>();
+    private static void bfs(NaryNode<Integer> treeNode) {
+        Queue<NaryNode<Integer>> traversalQueue = new LinkedList<>();
         traversalQueue.add(treeNode);
 
         while (traversalQueue.peek() != null) {
-            Node<Integer> node = traversalQueue.remove();
+            NaryNode<Integer> node = traversalQueue.remove();
 
-            List<Node<Integer>> children = node.getChildren();
+            List<NaryNode<Integer>> children = node.getChildren();
             traversalQueue.addAll(children);
 
             printNodeWithCheck(node, bfsTraversalQueue);
         }
     }
 
-    static Node<Integer> getTree() {
+    static NaryNode<Integer> getTree() {
         // 0
         // |       \
         // 1        2
         // | \      | \
         // 3  4     5  6
-        Node<Integer> root = new Node<>(0);
-        Node<Integer> node1 = new Node<>(1);
-        Node<Integer> node2 = new Node<>(2);
-        Node<Integer> node3 = new Node<>(3);
-        Node<Integer> node4 = new Node<>(4);
-        Node<Integer> node5 = new Node<>(5);
-        Node<Integer> node6 = new Node<>(6);
+        NaryNode<Integer> root = new NaryNode<>(0);
+        NaryNode<Integer> node1 = new NaryNode<>(1);
+        NaryNode<Integer> node2 = new NaryNode<>(2);
+        NaryNode<Integer> node3 = new NaryNode<>(3);
+        NaryNode<Integer> node4 = new NaryNode<>(4);
+        NaryNode<Integer> node5 = new NaryNode<>(5);
+        NaryNode<Integer> node6 = new NaryNode<>(6);
 
         node1.addChild(node3);
         node1.addChild(node4);
@@ -67,8 +70,8 @@ public class TreeMain {
         return root;
     }
 
-    static void printNodeWithCheck(Node<Integer> node, Queue<Integer> queue) {
-        System.out.println(node.data);
+    static void printNodeWithCheck(NaryNode<Integer> node, Queue<Integer> queue) {
+        System.out.print(node.data + " ");
         Integer peek = queue.peek();
 
         boolean isOrderCorrect = false;
